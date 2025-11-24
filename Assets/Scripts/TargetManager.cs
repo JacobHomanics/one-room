@@ -3,6 +3,8 @@ using UnityEngine.Events;
 using JacobHomanics.Timer;
 using TMPro;
 using JacobHomanics.Core.OverlapShape;
+using JacobHomanics.HealthSystem;
+using JacobHomanics.HealthSystem.UI;
 
 public class TargetManager : MonoBehaviour
 {
@@ -16,6 +18,8 @@ public class TargetManager : MonoBehaviour
 
     public OverlapShape overlapShape;
 
+    public GameObject targetUI;
+    public HealthAdapter enemyHealthAdapter;
 
     void Update()
     {
@@ -25,10 +29,15 @@ public class TargetManager : MonoBehaviour
             isHostile = false;
         }
 
+
+        if (target)
+            enemyHealthAdapter.health = target.GetComponentInChildren<Health>();
+
         if (target)
             text.text = target.name;
-        else
-            text.text = "";
+
+        targetUI.SetActive(target);
+
 
 
         if (isHostile && timer.IsDurationReached())
