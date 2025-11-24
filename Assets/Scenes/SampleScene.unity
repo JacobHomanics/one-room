@@ -153,7 +153,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 11
   m_Type: 1
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.16862746, g: 0, b: 0.20784314, a: 1}
   m_Intensity: 2
   m_Range: 10
   m_SpotAngle: 30
@@ -1184,6 +1184,26 @@ PrefabInstance:
         type: 3}
       propertyPath: isUsingIsMoving
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 564345573249701493, guid: 9591cb1fdeed74cde8f58f3ed3dcfdfe,
+        type: 3}
+      propertyPath: m_ClearFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 564345573249701493, guid: 9591cb1fdeed74cde8f58f3ed3dcfdfe,
+        type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0.20754719
+      objectReference: {fileID: 0}
+    - target: {fileID: 564345573249701493, guid: 9591cb1fdeed74cde8f58f3ed3dcfdfe,
+        type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0.0009789985
+      objectReference: {fileID: 0}
+    - target: {fileID: 564345573249701493, guid: 9591cb1fdeed74cde8f58f3ed3dcfdfe,
+        type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0.17049173
       objectReference: {fileID: 0}
     - target: {fileID: 644687346938442545, guid: 9591cb1fdeed74cde8f58f3ed3dcfdfe,
         type: 3}
