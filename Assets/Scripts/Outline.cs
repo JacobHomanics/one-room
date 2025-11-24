@@ -39,16 +39,10 @@ public class Outline : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler,
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        // if (activate != Activate.OnClick) return;
-        // isOutlineActive = !isOutlineActive;
-        // SetOutline(isOutlineActive);
-
-        Debug.Log(eventData.button);
-        if (eventData.button == PointerEventData.InputButton.Right)
-        {
-            FindAnyObjectByType<PlayerAnimator>().anim.SetTrigger("Attack");
-            Debug.Log("aye");
-        }
+        Debug.Log("Ayewe");
+        if (activate != Activate.OnClick) return;
+        isOutlineActive = !isOutlineActive;
+        SetOutline(isOutlineActive);
     }
 
     private void SetOutline(bool enable)

@@ -16,6 +16,15 @@
       },
       "hash": "a645c4a0b86b971d391317e3a789a11d5b636e1d"
     },
+    "com.jacobhomanics.timer": {
+      "version": "https://github.com/JacobHomanics/timer.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.ugui": "2.0.0"
+      },
+      "hash": "19e5c8ae48c397fb82f8a27b81c764726ff7980e"
+    },
     "com.pixelcraft_studios.aavegotchi_unity_sdk": {
       "version": "https://github.com/aavegotchi/unity-sdk.git",
       "depth": 0,
