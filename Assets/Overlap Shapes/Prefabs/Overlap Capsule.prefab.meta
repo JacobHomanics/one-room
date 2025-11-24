@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: eef7fd23810ee4daf9e32e5f121b797e
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 305907
+  packageName: Overlap Shapes
+  packageVersion: 1.0
+  assetPath: Assets/Overlap Shapes/Prefabs/Overlap Capsule.prefab
+  uploadId: 725219

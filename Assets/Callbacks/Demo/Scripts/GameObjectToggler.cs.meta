@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 77a832dce42494ed998e5e011994341c
+AssetOrigin:
+  serializedVersion: 1
+  productId: 305914
+  packageName: Callbacks
+  packageVersion: 1.0
+  assetPath: Assets/Callbacks/Demo/Scripts/GameObjectToggler.cs
+  uploadId: 725222

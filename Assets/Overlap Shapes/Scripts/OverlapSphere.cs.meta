@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 8c2d2c76ca8599143b64163cdf0fb8f1
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 305907
+  packageName: Overlap Shapes
+  packageVersion: 1.0
+  assetPath: Assets/Overlap Shapes/Scripts/OverlapSphere.cs
+  uploadId: 725219
