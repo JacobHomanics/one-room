@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - NPCBlockingArea
+  - InteractiveObject
+  - NPC
+  - PlayerBlockingArea
+  - ItemInWorld
+  - RPG Creation Kit/Looting Point
+  - RPG Creation Kit/Door
+  - RPG Creation Kit/DoorTeleportMarker
+  - RPG Creation Kit/CellInfo
+  - RPG Creation Kit/Projectile
+  - RPG Creation Kit/BodyPart
+  - RPG Creation Kit/NPC
+  - RPG Creation Kit/NavmeshLink
+  - RPG Creation Kit/BlockingZone
+  - RPG Creation Kit/IgnoreWeapons
+  - RPG Creation Kit/AI
+  - RPG Creation Kit/Terrain
+  - RPG Creation Kit/NPCActionPoint
+  - RPG Creation Kit/EntityShield
+  - RPG Creation Kit/ItemInWorld
+  - RPG Creation Kit/PlayerInInventory
+  - Fire
+  - RPG Creation Kit/FCover
+  - RPG Creation Kit/Throwable
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Player
+  - FirstPerson
+  - Projectile
+  - NavmeshLink
+  - NPC
+  - BodyPart
+  - Target
+  - PostProcessing
+  - Terrain
+  - ItemInWorld
+  - ThirdPersonOnly
+  - ExplosionObstacle
+  - AgainstPlayerOnly
+  - IgnorePlayer
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
