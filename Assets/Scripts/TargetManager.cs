@@ -14,12 +14,12 @@ public class TargetManager : MonoBehaviour
 
     public Action action;
 
-    public TMP_Text text;
-
     public OverlapShape overlapShape;
 
     public GameObject targetUI;
     public HealthAdapter enemyHealthAdapter;
+
+    public EntityNameDisplayer characterNameDisplayer;
 
     void Update()
     {
@@ -34,7 +34,7 @@ public class TargetManager : MonoBehaviour
             enemyHealthAdapter.health = target.GetComponentInChildren<Health>();
 
         if (target)
-            text.text = target.name;
+            characterNameDisplayer.entity = target.GetComponentInChildren<Entity>();
 
         targetUI.SetActive(target);
 
