@@ -7,8 +7,8 @@ public class EnemyTargetSetter : MonoBehaviour
 {
     public Health health;
 
-    public void Set(Transform target)
+    public void Set()
     {
-        // FindAnyObjectByType<TargetManager>().baf;
+        FindAnyObjectByType<TargetManager>().baf.SetFillImmediate(health.Current, health.Max);
     }
 }
