@@ -5,6 +5,7 @@ using TMPro;
 using JacobHomanics.Core.OverlapShape;
 using JacobHomanics.HealthSystem;
 using JacobHomanics.HealthSystem.UI;
+using JacobHomanics.TrickedOutUI;
 
 public class TargetManager : MonoBehaviour
 {
@@ -21,6 +22,8 @@ public class TargetManager : MonoBehaviour
 
     public EntityNameDisplayer characterNameDisplayer;
 
+    public BaseAnimatedFill baf;
+
     void Update()
     {
         if (Input.GetKeyUp(KeyCode.Escape))
@@ -28,7 +31,6 @@ public class TargetManager : MonoBehaviour
             target = null;
             isHostile = false;
         }
-
 
         if (target)
             enemyHealthAdapter.health = target.GetComponentInChildren<Health>();

@@ -5,7 +5,7 @@
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "633d8b9146d26e430504933ee8fc24786c780e04"
+      "hash": "a152f51d559f2cf7ed2835df8f763589cc4e33f0"
     },
     "com.jacobhomanics.rpgcontroller": {
       "version": "https://github.com/jacobhomanics/rpg-controller.git",
@@ -23,7 +23,7 @@
       "dependencies": {
         "com.unity.ugui": "2.0.0"
       },
-      "hash": "19e5c8ae48c397fb82f8a27b81c764726ff7980e"
+      "hash": "fa3da9738665c13b75a9efb00a8624c46e98c481"
     },
     "com.pixelcraft_studios.aavegotchi_unity_sdk": {
       "version": "https://github.com/aavegotchi/unity-sdk.git",
