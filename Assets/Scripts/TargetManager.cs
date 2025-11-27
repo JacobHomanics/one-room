@@ -59,9 +59,11 @@ public class TargetManager : MonoBehaviour
 
             foreach (var col in cols)
             {
-                if (col.transform.root.name == target.name)
+                Debug.Log(col.transform.root);
+                if (col.transform.root == target)
                 {
                     action.Initiate();
+                    break;
                 }
             }
         }

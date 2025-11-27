@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Events;
 
 namespace JacobHomanics.HealthSystem
 {
@@ -247,10 +248,12 @@ namespace JacobHomanics.HealthSystem
             }
         }
 
+        public UnityEvent<float> OnHealthDown;
+
         public void Damage(float amount)
         {
             float remainingDamage = amount;
-
+            float prevValue = Current;
             // Apply damage to shields in order
             for (int i = 0; i < Shields.Count && remainingDamage > 0; i++)
             {
@@ -272,6 +275,9 @@ namespace JacobHomanics.HealthSystem
                     remainingDamage -= healthDamage;
                 }
             }
+
+            if (Current < prevValue)
+                OnHealthDown?.Invoke(amount);
         }
 
         public void Heal(float amount)

@@ -729,7 +729,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3756454142300609242
 RectTransform:
   m_ObjectHideFlags: 0
@@ -988,6 +988,7 @@ GameObject:
   - component: {fileID: 4680271087360053349}
   - component: {fileID: 19011846274225606}
   - component: {fileID: 4202708720583088583}
+  - component: {fileID: 4502992095477136753}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -1103,6 +1104,24 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   lookAtPlayer: 1
+--- !u!114 &4502992095477136753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4894284209468124656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14a0e747bbb104a488d9ff19ea2c30d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textPrefab: {fileID: 3143608511450504771, guid: 8e7e513beef16409c8a4c948b766d27d,
+    type: 3}
+  health: {fileID: 6159629686588599597}
+  distanceY: 5
+  distanceX: 5
+  duration: 5
 --- !u!1 &5877403723171377120
 GameObject:
   m_ObjectHideFlags: 0
@@ -1477,6 +1496,9 @@ MonoBehaviour:
   shields:
   - _value: 0
     color: {r: 0, g: 0.7, b: 1, a: 0.7}
+  OnHealthDown:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8471382938718381675
 GameObject:
   m_ObjectHideFlags: 0
