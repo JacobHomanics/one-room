@@ -11,7 +11,7 @@ public class Attacker : MonoBehaviour
         if (timer.IsDurationReached())
         {
 
-            anim.SetTrigger("Attack");
+            anim.Play("Aavegotchi_MeleeAttack_Right");
             timer.Restart();
         }
     }

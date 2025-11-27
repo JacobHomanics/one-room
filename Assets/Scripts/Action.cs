@@ -1,12 +1,15 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Action : MonoBehaviour
+namespace JacobHomanics.Utilities
 {
-    public UnityEvent OnInitiate;
-
-    public void Initiate()
+    public class Action : MonoBehaviour
     {
-        OnInitiate?.Invoke();
+        public UnityEvent OnInitiate;
+
+        public void Initiate()
+        {
+            OnInitiate?.Invoke();
+        }
     }
 }
