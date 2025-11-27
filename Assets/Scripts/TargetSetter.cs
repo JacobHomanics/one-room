@@ -6,6 +6,9 @@ public class TargetSetter : MonoBehaviour
 {
     public void Set(Transform target)
     {
-        FindAnyObjectByType<TargetManager>().target = target;
+        Debug.Log("Step1");
+        FindAnyObjectByType<TargetManager>().SetTarget(target);
+        Debug.Log("Step 800");
+
     }
 }

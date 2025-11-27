@@ -22,7 +22,17 @@ public class TargetManager : MonoBehaviour
 
     public EntityNameDisplayer characterNameDisplayer;
 
-    public BaseAnimatedFill baf;
+    public AnimatedImageFill baf;
+
+    public void SetTarget(Transform target)
+    {
+        Debug.Log("Step2");
+
+        this.target = target;
+        Debug.Log("Step3");
+
+        // baf.image.fillAmount = baf.SetFillImmediate(target.GetComponentInChildren<Health>().Current, target.GetComponentInChildren<Health>().Max);
+    }
 
     void Update()
     {
