@@ -1,5 +1,7 @@
 using JacobHomanics.Core.OverlapShape;
 using JacobHomanics.HealthSystem;
+using JacobHomanics.Timer;
+
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -14,8 +16,24 @@ public class TargetManagerAttacker : MonoBehaviour
 
     public OverlapShape shape;
 
-    public void Attack()
+    public Timer timer;
+
+    //That ability is not ready yet
+    //My target is too far away
+    //I have no target
+
+    public UnityEvent OnCooldown;
+    public UnityEvent OnSuccess;
+
+    public void TryAttack()
     {
+        if (!timer.IsDurationReached())
+        {
+            Debug.Log("on Coold");
+            OnCooldown?.Invoke();
+            return;
+        }
+
         var cols = shape.Cast();
 
         bool isPresent = false;
@@ -28,8 +46,6 @@ public class TargetManagerAttacker : MonoBehaviour
                 break;
             }
         }
-
-
 
         if (targetManager.target && isPresent)
         {

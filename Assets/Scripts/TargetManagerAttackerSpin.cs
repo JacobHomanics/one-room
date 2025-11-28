@@ -1,7 +1,9 @@
 using System.Collections.Generic;
+using JacobHomanics.Timer;
 using JacobHomanics.Core.OverlapShape;
 using JacobHomanics.HealthSystem;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class TargetManagerSpin : MonoBehaviour
 {
@@ -12,9 +14,27 @@ public class TargetManagerSpin : MonoBehaviour
 
     public OverlapShape shape;
 
+    public Timer timer;
 
-    public void Attack()
+    //Event for timer not reached
+    // Reset timer on use
+    //Event for Attack
+    //Change to try attack
+
+    public UnityEvent OnCooldown;
+
+    public UnityEvent OnSuccess;
+
+    public void TryAttack()
     {
+
+        if (!timer.IsDurationReached())
+        {
+            Debug.Log("Cooldown invoked");
+            OnCooldown?.Invoke();
+            return;
+        }
+
 
         List<Transform> hitRoots = new List<Transform>();
 
@@ -41,5 +61,8 @@ public class TargetManagerSpin : MonoBehaviour
                 hitRoots.Add(col.transform.root);
             }
         }
+
+        OnSuccess?.Invoke();
+
     }
 }
