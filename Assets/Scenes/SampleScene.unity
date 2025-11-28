@@ -6798,9 +6798,33 @@ MonoBehaviour:
   damage: 70
   OnAttackSuccess:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1929508438}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Aavegotchi_MeleeAttack_Right
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2060423650}
+        m_TargetAssemblyTypeName: JacobHomanics.Timer.Timer, Assembly-CSharp
+        m_MethodName: Restart
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Aavegotchi_MeleeAttack_Right
+          m_BoolArgument: 0
+        m_CallState: 2
   shape: {fileID: 1615152674}
-  timer: {fileID: 0}
+  timer: {fileID: 2060423650}
   OnCooldown:
     m_PersistentCalls:
       m_Calls: []
@@ -8057,33 +8081,9 @@ MonoBehaviour:
   OnInitiate:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1929508438}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: Play
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Aavegotchi_MeleeAttack_Right
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2060423650}
-        m_TargetAssemblyTypeName: JacobHomanics.Timer.Timer, Assembly-CSharp
-        m_MethodName: Restart
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Attack
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1804507342}
         m_TargetAssemblyTypeName: TargetManagerAttacker, Assembly-CSharp
-        m_MethodName: Attack
+        m_MethodName: TryAttack
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
