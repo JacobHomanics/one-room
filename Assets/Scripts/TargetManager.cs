@@ -25,6 +25,11 @@ public class TargetManager : MonoBehaviour
 
     public AnimatedImageFill baf;
 
+    public void SetIsHostile(bool value)
+    {
+        isHostile = value;
+    }
+
     public void SetTarget(Transform target)
     {
         Debug.Log("Step2");
