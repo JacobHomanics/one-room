@@ -24,6 +24,8 @@ public class TargetManagerAttacker : MonoBehaviour
 
     public UnityEvent OnCooldown;
     public UnityEvent OnSuccess;
+    public UnityEvent NoTarget;
+    public UnityEvent TooFarAway;
 
     public void TryAttack()
     {
@@ -33,6 +35,14 @@ public class TargetManagerAttacker : MonoBehaviour
             OnCooldown?.Invoke();
             return;
         }
+
+        if (!targetManager.target)
+        {
+            NoTarget?.Invoke();
+            return;
+        }
+
+
 
         var cols = shape.Cast();
 
@@ -47,7 +57,13 @@ public class TargetManagerAttacker : MonoBehaviour
             }
         }
 
-        if (targetManager.target && isPresent)
+        if (!isPresent)
+        {
+            TooFarAway?.Invoke();
+            return;
+        }
+
+        if (isPresent)
         {
             var diff = damage * (variancePercentage / 100f);
 
