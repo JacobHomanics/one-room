@@ -23,11 +23,12 @@ public class AITarget : MonoBehaviour
     void Update()
     {
         distance = Vector3.Distance(agent.transform.position, target.position);
-        if (distance < attackDistance)
-        {
-            agent.isStopped = true;
-        }
 
-        anim.SetBool("IsMoving", distance < attackDistance);
+        agent.isStopped = distance <= attackDistance;
+        anim.SetBool("IsMoving", distance > attackDistance);
+
+        if (distance > attackDistance)
+            agent.destination = target.position;
+
     }
 }
