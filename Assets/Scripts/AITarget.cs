@@ -9,6 +9,8 @@ public class AITarget : MonoBehaviour
     public NavMeshAgent agent;
     public Animator anim;
 
+    public AudioSource audioSource;
+
     private float distance;
 
 
@@ -29,6 +31,9 @@ public class AITarget : MonoBehaviour
 
         if (distance > attackDistance)
             agent.destination = target.position;
+
+        if (audioSource)
+            audioSource.enabled = distance > attackDistance;
 
     }
 }
