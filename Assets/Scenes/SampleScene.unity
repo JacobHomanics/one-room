@@ -4577,7 +4577,19 @@ MonoBehaviour:
   allowSelfInterruption: 0
   OnCast:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2015525871}
+        m_TargetAssemblyTypeName: castbarUI, Assembly-CSharp
+        m_MethodName: OnCast
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnTimeComplete:
     m_PersistentCalls:
       m_Calls: []
@@ -5472,6 +5484,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cast Bar
       objectReference: {fileID: 0}
+    - target: {fileID: 4576084184997359843, guid: 88eabb2de1f334e258f5d90b22be1485,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 4966732595609684114, guid: 2e473eb69747d4740be78a5b09ea398f,
+        type: 3}
     - target: {fileID: 6509476325739473533, guid: 88eabb2de1f334e258f5d90b22be1485,
         type: 3}
       propertyPath: m_fontSize
@@ -5592,6 +5610,7 @@ PrefabInstance:
     - {fileID: 7243502526076747549, guid: 88eabb2de1f334e258f5d90b22be1485, type: 3}
     - {fileID: 5297360083780693024, guid: 88eabb2de1f334e258f5d90b22be1485, type: 3}
     - {fileID: 3278483529168980931, guid: 88eabb2de1f334e258f5d90b22be1485, type: 3}
+    - {fileID: 4398617826914576814, guid: 88eabb2de1f334e258f5d90b22be1485, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -5599,6 +5618,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 579303273}
+    - targetCorrespondingSourceObject: {fileID: 5855501457359935641, guid: 88eabb2de1f334e258f5d90b22be1485,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1271841683}
     - targetCorrespondingSourceObject: {fileID: 1214737034098330058, guid: 88eabb2de1f334e258f5d90b22be1485,
         type: 3}
       insertIndex: -1
@@ -5709,7 +5732,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e408bfa1f0fd406da58f423710d0252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vector2Adapter: {fileID: 0}
+  vector2Adapter: {fileID: 579303273}
   _valueComponent: {fileID: 1118765309}
   _featureComponents:
   - {fileID: 1118765308}
@@ -5751,7 +5774,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e408bfa1f0fd406da58f423710d0252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vector2Adapter: {fileID: 0}
+  vector2Adapter: {fileID: 579303273}
   _valueComponent: {fileID: 1118765312}
   _featureComponents:
   - {fileID: 1118765311}
@@ -6127,6 +6150,43 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1231799295}
   m_CullTransparentMesh: 1
+--- !u!1 &1271841678 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5855501457359935641, guid: 88eabb2de1f334e258f5d90b22be1485,
+    type: 3}
+  m_PrefabInstance: {fileID: 1118765300}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1271841681 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4576084184997359843, guid: 88eabb2de1f334e258f5d90b22be1485,
+    type: 3}
+  m_PrefabInstance: {fileID: 1118765300}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1271841678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1271841683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1271841678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc90ce389a14d486a8108ef9464416a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vector2Adapter: {fileID: 579303273}
+  properties:
+    animationDurationUp: 0
+    delayUp: 0
+    animationDurationDown: 0
+    delayDown: 0
+  image: {fileID: 1271841681}
 --- !u!1 &1287878388
 GameObject:
   m_ObjectHideFlags: 0
@@ -7138,7 +7198,37 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 644687346938442545, guid: 9591cb1fdeed74cde8f58f3ed3dcfdfe,
         type: 3}
+      propertyPath: events.Moved.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 644687346938442545, guid: 9591cb1fdeed74cde8f58f3ed3dcfdfe,
+        type: 3}
+      propertyPath: events.Moved.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 644687346938442545, guid: 9591cb1fdeed74cde8f58f3ed3dcfdfe,
+        type: 3}
+      propertyPath: events.Moved.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 897501811}
+    - target: {fileID: 644687346938442545, guid: 9591cb1fdeed74cde8f58f3ed3dcfdfe,
+        type: 3}
       propertyPath: events.otherEvents.Jumped.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 644687346938442545, guid: 9591cb1fdeed74cde8f58f3ed3dcfdfe,
+        type: 3}
+      propertyPath: events.Moved.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 644687346938442545, guid: 9591cb1fdeed74cde8f58f3ed3dcfdfe,
+        type: 3}
+      propertyPath: events.Moved.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CancelCast
+      objectReference: {fileID: 0}
+    - target: {fileID: 644687346938442545, guid: 9591cb1fdeed74cde8f58f3ed3dcfdfe,
+        type: 3}
+      propertyPath: events.movementEvents.Moving.m_PersistentCalls.m_Calls.Array.size
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 644687346938442545, guid: 9591cb1fdeed74cde8f58f3ed3dcfdfe,
@@ -7158,6 +7248,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 644687346938442545, guid: 9591cb1fdeed74cde8f58f3ed3dcfdfe,
         type: 3}
+      propertyPath: events.movementEvents.Moving.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 644687346938442545, guid: 9591cb1fdeed74cde8f58f3ed3dcfdfe,
+        type: 3}
+      propertyPath: events.Moved.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: JacobHomanics.Timer.Extensions.TimedAction, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 644687346938442545, guid: 9591cb1fdeed74cde8f58f3ed3dcfdfe,
+        type: 3}
+      propertyPath: events.movementEvents.Moving.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 897501811}
+    - target: {fileID: 644687346938442545, guid: 9591cb1fdeed74cde8f58f3ed3dcfdfe,
+        type: 3}
       propertyPath: events.otherEvents.Jumped.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
@@ -7165,6 +7270,16 @@ PrefabInstance:
         type: 3}
       propertyPath: events.otherEvents.Jumped.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: Jump
+      objectReference: {fileID: 0}
+    - target: {fileID: 644687346938442545, guid: 9591cb1fdeed74cde8f58f3ed3dcfdfe,
+        type: 3}
+      propertyPath: events.movementEvents.Moving.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 644687346938442545, guid: 9591cb1fdeed74cde8f58f3ed3dcfdfe,
+        type: 3}
+      propertyPath: events.movementEvents.Moving.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CancelCast
       objectReference: {fileID: 0}
     - target: {fileID: 644687346938442545, guid: 9591cb1fdeed74cde8f58f3ed3dcfdfe,
         type: 3}
@@ -7178,7 +7293,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 644687346938442545, guid: 9591cb1fdeed74cde8f58f3ed3dcfdfe,
         type: 3}
+      propertyPath: events.movementEvents.Moving.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: JacobHomanics.Timer.Extensions.TimedAction, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 644687346938442545, guid: 9591cb1fdeed74cde8f58f3ed3dcfdfe,
+        type: 3}
+      propertyPath: events.Moved.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 644687346938442545, guid: 9591cb1fdeed74cde8f58f3ed3dcfdfe,
+        type: 3}
       propertyPath: events.otherEvents.Jumped.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 644687346938442545, guid: 9591cb1fdeed74cde8f58f3ed3dcfdfe,
+        type: 3}
+      propertyPath: events.movementEvents.Moving.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 663455538752275987, guid: 9591cb1fdeed74cde8f58f3ed3dcfdfe,
@@ -8911,6 +9041,12 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  castbar: {fileID: 0}
+  spell1:
+    sprite: {fileID: 0}
+    name: 
+    castTime: 0
+    action: 
 --- !u!224 &1857311489
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9878,6 +10014,12 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  castbar: {fileID: 897501811}
+  spell1:
+    sprite: {fileID: 21300000, guid: 3e2efb84140b047b18528a6f17fc015a, type: 3}
+    name: Greater Heal
+    castTime: 2.4
+    action: 
 --- !u!114 &2052581152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9896,7 +10038,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2052581151}
         m_TargetAssemblyTypeName: TargetManagerSpin, Assembly-CSharp
-        m_MethodName: TryAttack
+        m_MethodName: StartCast
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
