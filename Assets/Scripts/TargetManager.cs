@@ -7,6 +7,7 @@ using JacobHomanics.HealthSystem;
 using JacobHomanics.HealthSystem.UI;
 using JacobHomanics.TrickedOutUI;
 using JacobHomanics.Utilities;
+using JacobHomanics.Essentials.RPGController;
 
 public class TargetManager : MonoBehaviour
 {
@@ -41,6 +42,12 @@ public class TargetManager : MonoBehaviour
     }
 
     public bool isPlayer;
+
+    void Awake()
+    {
+        if (!isPlayer)
+            target = FindAnyObjectByType<PlayerMotor>().transform.root;
+    }
 
     void Update()
     {
