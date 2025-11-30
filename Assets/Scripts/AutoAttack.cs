@@ -27,7 +27,6 @@ public class AutoAttack : MonoBehaviour
 
             foreach (var col in cols)
             {
-                Debug.Log(col.transform.root);
                 if (col.transform.root == targetManager.target)
                 {
                     action.Initiate();
