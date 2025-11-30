@@ -3072,6 +3072,18 @@ MonoBehaviour:
           m_StringArgument: Hit
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2015525870}
+        m_TargetAssemblyTypeName: AbilityWarner2, Assembly-CSharp
+        m_MethodName: WarnBad
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Hit
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!82 &763599030
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4239,9 +4251,46 @@ MonoBehaviour:
   textPrefab: {fileID: 1775116651587573924, guid: bdf3fa210ef1d476aa0cced4b3ae7036,
     type: 3}
   position: {fileID: 277443806}
+  startingPos: {fileID: 0}
   distance: 120
   duration: 3
   delay: 1
+  destination: {x: 0, y: 120, z: 0}
+--- !u!1 &990547242
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 990547243}
+  m_Layer: 5
+  m_Name: GameObject_01
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &990547243
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 990547242}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2015525868}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 281.3, y: -230}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1016765987
 GameObject:
   m_ObjectHideFlags: 0
@@ -8236,6 +8285,8 @@ GameObject:
   - component: {fileID: 2015525867}
   - component: {fileID: 2015525866}
   - component: {fileID: 2015525865}
+  - component: {fileID: 2015525869}
+  - component: {fileID: 2015525870}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -8321,6 +8372,7 @@ RectTransform:
   - {fileID: 662994081}
   - {fileID: 1778115564}
   - {fileID: 1499593975}
+  - {fileID: 990547243}
   m_Father: {fileID: 608958254}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -8328,6 +8380,42 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &2015525869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2015525864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05734e0796af2411c9de9fc022db2b4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textPrefab: {fileID: 0}
+  position: {fileID: 0}
+  startingPos: {fileID: 990547243}
+  distance: 0
+  duration: 2
+  delay: 0.5
+  destination: {x: 0, y: 130, z: 0}
+--- !u!114 &2015525870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2015525864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 690820d17135346a9a6d2566bebea62b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goodPrefab: {fileID: 1775116651587573924, guid: e00bada13d00848e4ba5e7c0098ee793,
+    type: 3}
+  badPrefab: {fileID: 1775116651587573924, guid: bdf3fa210ef1d476aa0cced4b3ae7036,
+    type: 3}
+  abilityWarner: {fileID: 2015525869}
 --- !u!1 &2036967279
 GameObject:
   m_ObjectHideFlags: 0
@@ -9025,6 +9113,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1225448008892802741, guid: b658aa3bb2c484fb497afbcf1a2c9131,
+        type: 3}
+      propertyPath: m_Speed
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3965963795589174393, guid: b658aa3bb2c484fb497afbcf1a2c9131,
         type: 3}
       propertyPath: m_LocalPosition.x
