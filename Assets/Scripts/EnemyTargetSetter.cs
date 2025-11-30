@@ -9,6 +9,6 @@ public class EnemyTargetSetter : MonoBehaviour
 
     public void Set()
     {
-        FindAnyObjectByType<TargetManager>().baf.SetFillImmediate(health.Current, health.Max);
+        // FindAnyObjectByType<TargetManager>().baf.SetFillImmediate(health.Current, health.Max);
     }
 }

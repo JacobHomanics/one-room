@@ -12,18 +12,18 @@ public class TargetManager : MonoBehaviour
 {
     public Transform target;
     public bool isHostile;
-    public Timer timer;
+    // public Timer timer;
 
-    public Action action;
+    // public Action action;
 
-    public OverlapShape overlapShape;
+    // public OverlapShape overlapShape;
 
     public GameObject targetUI;
     public HealthAdapter enemyHealthAdapter;
 
     public EntityNameDisplayer characterNameDisplayer;
 
-    public AnimatedImageFill baf;
+    // public AnimatedImageFill baf;
 
     public void SetIsHostile(bool value)
     {
@@ -40,37 +40,41 @@ public class TargetManager : MonoBehaviour
         // baf.image.fillAmount = baf.SetFillImmediate(target.GetComponentInChildren<Health>().Current, target.GetComponentInChildren<Health>().Max);
     }
 
+    public bool isPlayer;
+
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.Escape))
+        if (isPlayer)
         {
-            target = null;
-            isHostile = false;
-        }
-
-        if (target)
-            enemyHealthAdapter.health = target.GetComponentInChildren<Health>();
-
-        if (target)
-            characterNameDisplayer.entity = target.GetComponentInChildren<Entity>();
-
-        targetUI.SetActive(target);
-
-
-
-        if (isHostile && timer.IsDurationReached())
-        {
-            var cols = overlapShape.Cast();
-
-            foreach (var col in cols)
+            if (Input.GetKeyUp(KeyCode.Escape))
             {
-                Debug.Log(col.transform.root);
-                if (col.transform.root == target)
-                {
-                    action.Initiate();
-                    break;
-                }
+                target = null;
+                isHostile = false;
             }
+
+
+            if (target)
+                enemyHealthAdapter.health = target.GetComponentInChildren<Health>();
+
+            if (target)
+                characterNameDisplayer.entity = target.GetComponentInChildren<Entity>();
+
+            targetUI.SetActive(target);
         }
+
+        // if (isHostile && timer.IsDurationReached())
+        // {
+        //     var cols = overlapShape.Cast();
+
+        //     foreach (var col in cols)
+        //     {
+        //         Debug.Log(col.transform.root);
+        //         if (col.transform.root == target)
+        //         {
+        //             action.Initiate();
+        //             break;
+        //         }
+        //     }
+        // }
     }
 }
