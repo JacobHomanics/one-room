@@ -16,6 +16,8 @@ public class TargetManagerSpin : MonoBehaviour
 
     public Timer timer;
 
+    public Health selfHealth;
+
     //Event for timer not reached
     // Reset timer on use
     //Event for Attack
@@ -35,6 +37,14 @@ public class TargetManagerSpin : MonoBehaviour
             return;
         }
 
+        if (selfHealth)
+        {
+            var diff = damage * (variancePercentage / 100f);
+            var rn = Random.Range(damage - diff, damage + diff);
+            selfHealth.Heal(rn);
+            OnSuccess?.Invoke();
+            return;
+        }
 
         List<Transform> hitRoots = new List<Transform>();
 
