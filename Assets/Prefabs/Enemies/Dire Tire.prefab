@@ -3134,7 +3134,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 8241527144455933682}
         m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: Play
+        m_MethodName: SetTrigger
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6187,7 +6187,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 2.5754447}
+  m_AnchoredPosition: {x: 0, y: 0.83}
   m_SizeDelta: {x: 960, y: 458.7146}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &6450580598725534507
@@ -7534,6 +7534,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8910592539354790204, guid: b4d97edd6a5eb334c8d5819825f7bc88,
+        type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6ee918fbccf3745c4b9a3343f5640f7d, type: 2}
     m_RemovedComponents:
     - {fileID: 7496922270709276816, guid: b4d97edd6a5eb334c8d5819825f7bc88, type: 3}
     - {fileID: 2352287963182119793, guid: b4d97edd6a5eb334c8d5819825f7bc88, type: 3}
