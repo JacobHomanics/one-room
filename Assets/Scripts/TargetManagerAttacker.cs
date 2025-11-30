@@ -42,6 +42,11 @@ public class TargetManagerAttacker : MonoBehaviour
             return;
         }
 
+        if (targetManager.target.root.GetComponentInChildren<Health>().Current <= 0)
+        {
+            return;
+        }
+
 
 
         var cols = shape.Cast();

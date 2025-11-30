@@ -249,6 +249,7 @@ namespace JacobHomanics.HealthSystem
         }
 
         public UnityEvent<float> OnHealthDown;
+        public UnityEvent OnHealthZero;
 
         public void Damage(float amount)
         {
@@ -278,6 +279,9 @@ namespace JacobHomanics.HealthSystem
 
             if (Current < prevValue)
                 OnHealthDown?.Invoke(amount);
+
+            if (Current <= 0)
+                OnHealthZero?.Invoke();
         }
 
         public void Heal(float amount)
