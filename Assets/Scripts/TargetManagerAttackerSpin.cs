@@ -125,7 +125,7 @@ public class TargetManagerSpin : MonoBehaviour
 
         foreach (var col in cols)
         {
-            bool isPresent = false;
+            var isPresent = false;
 
             foreach (var root in hitRoots)
             {
@@ -140,7 +140,10 @@ public class TargetManagerSpin : MonoBehaviour
             {
                 var diff = damage * (variancePercentage / 100f);
                 var rn = Random.Range(damage - diff, damage + diff);
-                col.transform.root.GetComponentInChildren<Health>().Damage(rn);
+
+                var health = col.transform.root.GetComponentInChildren<Health>();
+                if (health != null)
+                    health.Damage(rn);
                 hitRoots.Add(col.transform.root);
             }
         }
