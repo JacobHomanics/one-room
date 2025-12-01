@@ -2969,8 +2969,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2254f7be1fd643299cf8f2339102d73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  duration: 3
-  elapsedTime: 3
+  duration: 7
+  elapsedTime: 7
   tickType: 0
   loop: 0
   OnTick:
@@ -3033,7 +3033,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetManager: {fileID: 6862208297893859726}
   variancePercentage: 20
-  damage: 20
+  damage: 70
   OnAttackSuccess:
     m_PersistentCalls:
       m_Calls:
@@ -5133,7 +5133,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: -1372625422
   m_Radius: 0.5
-  m_Speed: 1.5
+  m_Speed: 1
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
