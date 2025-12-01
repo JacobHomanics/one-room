@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: PlayerMotorScriptableObject
   m_EditorClassIdentifier: 
   motorValues:
-    leftMoveSpeed: 3.5
-    rightMoveSpeed: 3.5
-    forwardMoveSpeed: 3.5
+    leftMoveSpeed: 5
+    rightMoveSpeed: 5
+    forwardMoveSpeed: 5
     backwardMoveSpeed: 2.4
     gravity: {x: 0, y: 9.81, z: 0}
     jumpPower: 15

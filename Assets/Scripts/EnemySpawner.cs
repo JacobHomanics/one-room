@@ -2,12 +2,14 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    public GameObject go;
+    public GameObject[] go;
 
+    [ContextMenu("SPawns")]
     public void Spawn()
     {
-        var newGo = Instantiate(go);
-        newGo.transform.position = transform.position;
+        var rn = Random.Range(0, go.Length);
+        var newGo = Instantiate(go[rn], transform.position, Quaternion.identity);
+        // newGo.transform.position = transform.position;
     }
 
     [SerializeField] private float gizmoRadius;
