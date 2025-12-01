@@ -15,12 +15,20 @@ public class HealthUpAnimator : MonoBehaviour
     void OnEnable()
     {
         health.OnHealthUp.AddListener(HandleHealthDown);
+        health.OnShieldUp.AddListener(HandleShieldUp);
     }
 
     void OnDisable()
     {
         health.OnHealthUp.RemoveListener(HandleHealthDown);
+        health.OnShieldUp.RemoveListener(HandleShieldUp);
+    }
 
+    public UnityEvent<float> OnShieldUp;
+
+    void HandleShieldUp(float value)
+    {
+        OnShieldUp?.Invoke(value);
     }
 
     public void HandleHealthDown(float value)

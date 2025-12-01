@@ -619,6 +619,7 @@ GameObject:
   - component: {fileID: 4602173368254729139}
   - component: {fileID: 1909276376844054752}
   - component: {fileID: 9028347094856908245}
+  - component: {fileID: 8862644064222495557}
   m_Layer: 0
   m_Name: health
   m_TagString: Untagged
@@ -662,7 +663,13 @@ MonoBehaviour:
   OnHealthDown:
     m_PersistentCalls:
       m_Calls: []
+  OnHealthUp:
+    m_PersistentCalls:
+      m_Calls: []
   OnHealthZero:
+    m_PersistentCalls:
+      m_Calls: []
+  OnShieldUp:
     m_PersistentCalls:
       m_Calls: []
 --- !u!114 &1909276376844054752
@@ -769,6 +776,33 @@ MonoBehaviour:
           m_StringArgument: Death
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8862644064222495557}
+        m_TargetAssemblyTypeName: EnemyDeathPowerupSpawner, Assembly-CSharp
+        m_MethodName: Spawn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Death
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &8862644064222495557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1016678756729552469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5155921bebebc41d7b625506dab85dfa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickup1: {fileID: 2657077861045430837, guid: e0f7b8b7cb13c48ba95757df18d2d91e, type: 3}
+  pickup2: {fileID: 1119190201955824850, guid: 29ff0ceb385484f4eb87a35da0f63216, type: 3}
+  baseDropPercentage: 30
 --- !u!1 &1022052810614929028
 GameObject:
   m_ObjectHideFlags: 0

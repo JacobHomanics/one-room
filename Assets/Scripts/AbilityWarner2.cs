@@ -5,6 +5,7 @@ using TMPro;
 public class AbilityWarner2 : MonoBehaviour
 {
     public GameObject goodPrefab;
+    public GameObject bluePrefabs;
     public GameObject badPrefab;
 
     public AbilityWarner abilityWarner;
@@ -14,9 +15,17 @@ public class AbilityWarner2 : MonoBehaviour
         abilityWarner.Warn("+" + value.ToString("###"), goodPrefab);
     }
 
+    public void WarnBlue(float value)
+    {
+        abilityWarner.Warn("+" + value.ToString("###"), bluePrefabs);
+    }
+
+
     public void WarnBad(float value)
     {
         abilityWarner.Warn("-" + value.ToString("###"), badPrefab);
     }
+
+
 
 }

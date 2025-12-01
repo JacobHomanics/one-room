@@ -304,6 +304,8 @@ namespace JacobHomanics.HealthSystem
             OnHealthUp?.Invoke(amount);
         }
 
+        public UnityEvent<float> OnShieldUp;
+
         public void RestoreShield(float amount)
         {
             if (Shields.Count == 0)
@@ -313,6 +315,7 @@ namespace JacobHomanics.HealthSystem
 
 
             Shields[0].value += amount;
+            OnShieldUp?.Invoke(amount);
         }
 
 
