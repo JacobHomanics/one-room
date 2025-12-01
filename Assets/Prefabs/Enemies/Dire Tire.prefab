@@ -3162,7 +3162,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetManager: {fileID: 6862208297893859726}
   variancePercentage: 20
-  damage: 2
+  damage: 5
   OnAttackSuccess:
     m_PersistentCalls:
       m_Calls:
